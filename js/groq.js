@@ -3,10 +3,19 @@
  * Handles AI-powered patient conversations
  */
 
-// Groq API Configuration
-const GROQ_API_KEY = "YOUR_GROQ_KEY_HERE";
+// Groq API Configuration - Get key from localStorage or prompt user
+let GROQ_API_KEY = localStorage.getItem('groq_key') || '';
+
+if (!GROQ_API_KEY || GROQ_API_KEY === 'YOUR_GROQ_KEY_HERE') {
+  GROQ_API_KEY = prompt('EmpathyLens XR\n\nEnter your Groq API key to enable AI patient chat:\n(Get a free key at console.groq.com)');
+  if (GROQ_API_KEY && GROQ_API_KEY.trim()) {
+    localStorage.setItem('groq_key', GROQ_API_KEY.trim());
+    GROQ_API_KEY = GROQ_API_KEY.trim();
+  }
+}
+
 const API_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions";
-const MODEL = "llama-3.1-8b-instant";
+const MODEL = "llama3-8b-8192";
 
 // System prompts for each condition
 const systemPrompts = {
