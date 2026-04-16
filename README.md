@@ -4,7 +4,7 @@
 
 **Step Into Their World** — An immersive WebXR experience that simulates neurological conditions from the patient's perspective, helping healthcare workers and caregivers build deeper empathy through AI-powered patient interactions.
 
-🌐 **Live Demo:** [https://kapilshastriwork-maker.github.io/empathylens-xr/](https://kapilshastriwork-maker.github.io/empathylens-xr/)
+🌐 **Live Demo:** https://kapilshastriwork-maker.github.io/empathylensXR/
 
 ---
 
